@@ -1,4 +1,4 @@
-/* See LICENSE file for copyright and license details. */
+
 
 /* appearance */
 static const unsigned int borderpx  = 3;        /* border pixel of windows */
@@ -146,7 +146,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,		XK_u,		setlayout,	{.v = &layouts[5]} }, /* monocle */
 	{ MODKEY,			XK_i,		setlayout,	{.v = &layouts[6]} }, /* centeredmaster */
 	{ MODKEY|ShiftMask,		XK_i,		setlayout,	{.v = &layouts[7]} }, /* centeredfloatingmaster */
-	{ MODKEY,			XK_o,		incnmaster,     {.i = +1 } },
+	{ MODKEY,		XK_o,		spawn,		SHCMD("emacs") },
 	{ MODKEY|ShiftMask,		XK_o,		incnmaster,     {.i = -1 } },
 	{ MODKEY,			XK_p,			spawn,		SHCMD("mpc toggle") },
 	{ MODKEY|ShiftMask,		XK_p,			spawn,		SHCMD("mpc pause ; pauseallmpv") },
